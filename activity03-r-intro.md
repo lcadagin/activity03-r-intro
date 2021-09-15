@@ -1,6 +1,6 @@
 Activity 3
 ================
-Luke B. Cadagin III
+Luke B. Cadagin
 
 Today you will be creating and manipulating vectors, lists, and data
 frames to uncover a top secret message.
