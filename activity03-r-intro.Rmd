@@ -31,60 +31,62 @@ Create three vectors that contain: 1) the lower case letters, 2) the lower case 
 ```{r}
 lower_case <- c("a", "b", "c", "d", "e", "f", "g", "h", "i", "j", "k", "l", "m", "n", "o", "p", "q", "r", "s", "t", "u", "v", "w", "x", "y", "z")
 
-upper_case <- c("A", "B", "C", "D", "E", "F", "G", "H" "I", "J", "K", "L", "M", "N", "O", "P", "Q", "R", "S", "T", "U", "V", "W", "X", "Y", "Z")
+upper_case <- c("A", "B", "C", "D", "E", "F", "G", "H", "I", "J", "K", "L", "M", "N", "O", "P", "Q", "R", "S", "T", "U", "V", "W", "X", "Y", "Z")
 
-punctuation <- c(".", ",", "!", "?", "'", """, "(", ")", " ", "-", ";", ":")
+punctuation <- c(".", ",", "!", "?", "'", "\"", "(", ")", " ", "-", ";", ":")
 ```
 
 Comment on what you noticed about the errors and how you used this information to correct the issues.
 
 **Response**:
-
+I saw red squiggley where there was an error ni the code.  When I hovered my cursor over this, an error message appeared that helped me diagnose the problem.
 
 Make one long vector containing all the symbols.
 
 ```{r}
-my_symbols <- cbind(lower_case, upper_case, punctuation)
+my_symbols <- c(lower_case, upper_case, punctuation)
 ```
 
 Comment on what you noticed about the errors and how you used this information to correct the issues.
 
 **Response**:
-
+The error told me that the arguments for cbind() did not take multiple vectors, theis indicated that the wrong function was being used.
 
 Turn the `my_symbols` vector into a data frame, with the variable name "Symbol".
 
 ```{r}
-my_symbols <- dataframe(my_symbols)
-names(my_symbols) = Symbol
+my_symbols <- data.frame(my_symbols)
+names(my_symbols) = "Symbol"
 ```
 
 Comment on what you noticed about the errors and how you used this information to correct the issues.
 
 **Response**:
-
+The error stated that the dataframe() function could not be found, which suggested it was typed incorrectly.  The error stated that the Symbol variable was not found, this suggested that Symbol needed quotes.
 
 Find the total number of symbols we have in our data frame.  
 
 ```{r}
-len <- length(my_symbols)
+len <- lengths(my_symbols)
+len
 ```
 
 Comment on what you noticed about the errors and how you used this information to correct the issues.
 
 **Response**:
 
-
+The number of symbols came out to 1, this was incorrect as we needed 64.  The function was lengths() no length()
 5. Create a new variable in your dataframe that assigns a number to each symbol.
 
 ```{r}
-my_symbols%Num <- 1:len
+my_symbols$Num <- 1:len
+my_symbols
 ```
 
 Comment on what you noticed about the errors and how you used this information to correct the issues.
 
 **Response**:
-
+I initially got rid of the % sign, but then I figured out that the $ needed to be used to create a Num column for each row.
 
 
 ![](README-img/noun_pause.png) **Planned Pause Point**: If things made sense, feel free to continue on while you wait. Otherwise, contact your instructor to have them verify your work.
@@ -112,6 +114,19 @@ Write your own code to complete the steps below.
 4. Square every number.
 
 ```{r}
+#Step 1
+top_secret <- top_secret + 14
+
+#Step 2
+top_secret <- (top_secret * 18) -257
+
+#Step 3
+top_secret <- exp(top_secret)
+
+#Step 4
+top_secret <- top_secret ^ 2
+
+top_secret
 
 ```
 
@@ -125,6 +140,7 @@ Write your own code to complete the steps below.
 10. Turn your matrix back into a vector.
 
 ```{r}
+#Step 5
 
 ```
 
