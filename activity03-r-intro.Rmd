@@ -1,6 +1,6 @@
 ---
 title: "Activity 3"
-author: "Luke Cadagin"
+author: "Luke B Cadagin"
 output: github_document
 ---
 
