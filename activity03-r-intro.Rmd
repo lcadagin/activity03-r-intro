@@ -57,6 +57,7 @@ Turn the `my_symbols` vector into a data frame, with the variable name "Symbol".
 ```{r}
 my_symbols <- data.frame(my_symbols)
 names(my_symbols) = "Symbol"
+my_symbols
 ```
 
 Comment on what you noticed about the errors and how you used this information to correct the issues.
@@ -141,7 +142,24 @@ top_secret
 
 ```{r}
 #Step 5
+top_secret <- matrix(top_secret, ncol = 5)
+top_secret
 
+#Step 6
+evens <- seq(from = 2, to = 502, by = 2)
+
+#Step 7
+top_secret[,1] <- top_secret[,1] - evens
+
+#Step 8
+top_secret[18:24,3] <- top_secret[18:24,3] - 100
+
+#Step 9
+top_secret[,4:5] <- top_secret[,4:5] * 2
+
+#Step 10
+top_secret <- c(top_secret)
+top_secret
 ```
 
 **HQ UPDATE:** Headquarters has informed you that at this stage of decoding, all numbers in indices 500 and beyond are below 100.
@@ -151,7 +169,15 @@ top_secret
 13. Replace all instances of the number 39 with 20.
 
 ```{r}
+#Step 11
+top_secret[38:465] <- sqrt(top_secret[38:465])
 
+#Step 12
+top_secret <- round(top_secret)
+
+#Step 13
+top_secret <- replace(top_secret, top_secret == 39, 20)
+top_secret
 ```
 
 **HQ UPDATE:** Headquarters has informed you that your final message should have 421 even numbers.
@@ -170,7 +196,7 @@ Google the first line of this message, if you do not recognize it, to see what i
 
 **delete this line and comment on what on the activity as a whole**
 
-Comment on what you noticed about the activity as a whole.
+I thought this was a great activity to practice manipulating vectors and matrices in addition to figuring out new and usefull functions.
 
 **Response**:
 
